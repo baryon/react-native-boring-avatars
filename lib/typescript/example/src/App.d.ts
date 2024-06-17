@@ -1,1 +1,3 @@
-export default function App(): JSX.Element;
+import * as React from 'react';
+export default function App(): React.JSX.Element;
+//# sourceMappingURL=App.d.ts.map
