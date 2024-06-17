@@ -144,6 +144,6 @@
     ]
   },
   "dependencies": {
-    "react-native-svg": "^15.3.0"
+    "react-native-svg": "^15.2.0"
   }
 }
