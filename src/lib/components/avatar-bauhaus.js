@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { getNumber, getUnit, getRandomColor, getBoolean } from '../utilities';
+import { hashCode, getUnit, getRandomColor, getBoolean } from '../utilities';
 import Svg, { Mask, Rect, G, Circle, Line } from 'react-native-svg';
 
 const ELEMENTS = 4;
 const SIZE = 80;
 
 function generateColors(name, colors) {
-  const numFromName = getNumber(name);
+  const numFromName = hashCode(name);
   const range = colors && colors.length;
 
   const elementsProperties = Array.from({ length: ELEMENTS }, (_, i) => ({

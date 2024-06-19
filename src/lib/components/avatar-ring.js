@@ -1,12 +1,12 @@
 import React from 'react';
-import { getNumber, getRandomColor } from '../utilities';
+import { hashCode, getRandomColor } from '../utilities';
 import Svg, { Mask, Rect, G, Path, Circle } from 'react-native-svg';
 
 const SIZE = 90;
 const COLORS = 5;
 
 function generateColors(colors, name) {
-  const numFromName = getNumber(name);
+  const numFromName = hashCode(name);
   const range = colors && colors.length;
   const colorsShuffle = Array.from({ length: COLORS }, (_, i) =>
     getRandomColor(numFromName + (i + 1), colors, range)

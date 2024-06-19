@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  getNumber,
+  hashCode,
   getUnit,
   getBoolean,
   getRandomColor,
@@ -11,7 +11,7 @@ import Svg, { Mask, Rect, G, Path } from 'react-native-svg';
 const SIZE = 36;
 
 function generateData(name, colors) {
-  const numFromName = getNumber(name);
+  const numFromName = hashCode(name);
   const range = colors && colors.length;
   const wrapperColor = getRandomColor(numFromName, colors, range);
   const preTranslateX = getUnit(numFromName, 10, 1);

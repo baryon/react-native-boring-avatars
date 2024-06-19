@@ -1,13 +1,12 @@
-export const getNumber = (name) => {
-  const charactersArray = name ? Array.from(name) : [];
-  let charactersCodesSum = 0;
-
-  charactersArray.forEach((charactersArrayItem) => {
-    return (charactersCodesSum += charactersArrayItem.charCodeAt(0));
-  });
-
-  return charactersCodesSum;
-};
+export const hashCode = (name) => {
+  var hash = 0;
+  for (var i = 0; i < name.length; i++) {
+      var character = name.charCodeAt(i);
+      hash = ((hash<<5)-hash)+character;
+      hash = hash & hash; // Convert to 32bit integer
+  }
+  return Math.abs(hash);
+}
 
 export const getModulus = (num, max) => {
   return num % max;

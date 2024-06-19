@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { getNumber, getRandomColor } from '../utilities';
+import { hashCode, getRandomColor } from '../utilities';
 import Svg, {
   Mask,
   Rect,
@@ -14,7 +14,7 @@ const ELEMENTS = 4;
 const SIZE = 80;
 
 function generateColors(name, colors) {
-  const numFromName = getNumber(name);
+  const numFromName = hashCode(name);
   const range = colors && colors.length;
 
   const elementsProperties = Array.from({ length: ELEMENTS }, (_, i) => ({
